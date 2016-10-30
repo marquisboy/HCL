@@ -1,0 +1,76 @@
+﻿@model PagedList.PagedList<HCLProj.Car>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Main List";
+    //var carModel = "";
+    //var carMake = "";
+    var val = ViewBag.val;
+    var field = ViewBag.field;
+}
+<div>
+    <br />
+    <div class="col-sm-2">@Html.ActionLink("Add Car", "Add", null, new { @class = "btn btn-primary" })</div>
+    <div class="col-sm-5">
+        @using (@Html.BeginForm("List", "Home"))
+        {
+            <select name="field" id="field">
+                <option>Make</option>
+                <option>Model</option>
+            </select>
+            @Html.TextBox("val",(string)val)
+            <input type="submit" value="search" />
+        }
+    </div>
+    @*<div class="col-sm-1"></div>*@
+    <div class="col-sm-5">
+        @using (@Html.BeginForm("Find", "Home"))
+        {
+            <span>Find By ID</span>
+            @Html.TextBox("id")
+            <input type="submit" value="Search" />
+        }
+    </div>
+    
+</div>
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th width="0">ID</th>
+                <th>Make</th>
+                <th>Model Name</th>
+                <th>Year</th>
+                <th>Drive</th>
+                <th>Trans Type</th>
+                <th>Doors</th>
+                <th>Seats</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Car car in Model)
+            {
+                <tr>
+                    <td width="0">@car.id</td>
+                    <td>@car.make</td>
+                    <td>@car.model_name</td>
+                    <td>@car.model_year</td>
+                    <td>@car.drive_type</td>
+                    <td>@car.transmission_type</td>
+                    <td>@car.doors</td>
+                    <td>@car.seats</td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = @car.id,val=val,field=field }) |
+                        @Html.ActionLink("Edit", "Edit", new { id = @car.id, val=val, field=field })
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+@Html.PagedListPager(Model, page => Url.Action("List", new  { field=field, val=val,page}))
+
+
+

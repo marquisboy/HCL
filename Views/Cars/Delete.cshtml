@@ -1,0 +1,78 @@
+﻿@model HCLProj.Car
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model_year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model_year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.body_style)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.body_style)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.engine_fuel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.engine_fuel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.drive_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.drive_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.transmission_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.transmission_type)
+        </dd>
+        </dl>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "List")
+        </div>
+    }
+</div>

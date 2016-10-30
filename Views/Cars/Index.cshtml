@@ -1,0 +1,243 @@
+﻿@model IEnumerable<HCLProj.Car>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.model_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.model_trim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.model_year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.body_style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_cc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_num_cyl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_valves_per_cyl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_power_ps)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_power_rpm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_torque_nm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_torque_rpm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_bore_mm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_stroke_mm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_compression)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine_fuel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.top_speed_kph)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zero_to_100_kph)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.drive_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.transmission_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.doors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.weight_kg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.length_mm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.width_mm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.height_mm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wheelbase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkm_hwy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkm_mixed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkm_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fuel_capacity_l)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sold_in_us)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.co2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.make_display)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.model_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.model_trim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.model_year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.body_style)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_cc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_num_cyl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_valves_per_cyl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_power_ps)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_power_rpm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_torque_nm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_torque_rpm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_bore_mm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_stroke_mm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_compression)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine_fuel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.top_speed_kph)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zero_to_100_kph)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.drive_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.transmission_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.doors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weight_kg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.length_mm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.width_mm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.height_mm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wheelbase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkm_hwy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkm_mixed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkm_city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fuel_capacity_l)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sold_in_us)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.co2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.make_display)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
